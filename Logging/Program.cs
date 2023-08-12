@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 //builder.Logging.AddConsole();
 //builder.Logging.AddDebug();
 
-builder.Logging.ClearProviders();
+//builder.Logging.ClearProviders();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
