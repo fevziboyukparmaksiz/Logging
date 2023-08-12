@@ -2,6 +2,8 @@ using Microsoft.Extensions.Logging.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+
 //builder.Logging.AddConsole();
 //builder.Logging.AddDebug();
 
@@ -11,6 +13,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+var logger = app.Services.GetRequiredService<ILogger<Program>>();
+logger.LogInformation("uygulama ayaða kalkýyor...");
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
